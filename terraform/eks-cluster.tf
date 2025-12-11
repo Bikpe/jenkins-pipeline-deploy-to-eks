@@ -88,6 +88,8 @@ module "vpc" {
 
   azs                 = ["${var.region}a", "${var.region}b", "${var.region}c"]
   public_subnets      = ["10.100.1.0/24", "10.100.2.0/24", "10.100.3.0/24"]
+
+  map_public_ip_on_launch = true
   enable_nat_gateway  = false # Can be set to true if nodes need to reach external services
   enable_dns_hostnames = true
   enable_dns_support   = true
