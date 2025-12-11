@@ -42,11 +42,13 @@
 variable "environment" {
   description = "The environment name (e.g., staging, prod)"
   type        = string
+  default = "Staging"
 }
 
 variable "cluster_name" {
   description = "Name for the EKS cluster"
   type        = string
+  default     = "myapp-eks-cluster"
 }
 
 variable "vpc_cidr" {
@@ -77,15 +79,4 @@ variable "region" {
   description = "The AWS region to deploy EKS"
   type        = string
   default     = "us-east-1"
-}
-
-variable "environment" {
-  description = "The environment name (e.g., dev, staging, prod)"
-  type        = string
-}
-
-variable "cluster_name" {
-  description = "The name to assign to the EKS cluster (e.g., jenkins-dev-eks)"
-  type        = string
-  default     = "myapp-eks-cluster"
 }
