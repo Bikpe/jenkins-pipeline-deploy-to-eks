@@ -78,3 +78,14 @@ variable "region" {
   type        = string
   default     = "us-east-1"
 }
+
+variable "environment" {
+  description = "The environment name (e.g., dev, staging, prod)"
+  type        = string
+}
+
+variable "cluster_name" {
+  description = "The name to assign to the EKS cluster (e.g., jenkins-dev-eks)"
+  type        = string
+  default     = "myapp-eks-cluster"
+}
