@@ -66,6 +66,8 @@ module "eks_cluster" {
       min_size       = 1
       desired_size   = var.desired_size
       max_size       = var.max_size
+
+      ami_type       = "AL2_x86_64"
       
       # Labels are useful for scheduling
       labels = {
